@@ -62,21 +62,29 @@ const userData = {
 // console.log("user1", user1);
 // console.log("user2", user2);
 
-const player = {
+const game = {
   nick: "KILLER",
   points: 0,
   startGame() {
     const userValue = confirm("ОРЕЛ - ДА, РЕШКА - НЕТ");
     const yesOrNo = Math.random() > 0.5; // случайное да или нет
     if (userValue == yesOrNo) {
-      alert(`Вы угадали у вас ${++player.points}`);
+      // player.points = player.points + 1
+      // player.points += 1
+      // player.points++
+      alert(`Вы угадали, ваши очки: ${++this.points}`);
     } else {
-      alert(`Вы ошиблись у вас ${--player.points}`);
+      alert(`Вы ошиблись, ваши очки: ${--this.points}`);
     }
-    let wantUserStart = confirm("Сыграть?");
-    if (wantUserStart) {
-      player.startGame();
-    }
+    // player.startGame() .. перезапускаем после каждой игры
+    let wantUserStart = confirm("сыграть");
+    // if (wantUserStart) {
+    //   player.startGame()
+    // } else {
+
+    // }
+    // this - объект в котором мы находимся
+    if (wantUserStart) this.startGame();
   },
 };
-player.startGame();
+game.startGame(); // запускаем в первый раз
