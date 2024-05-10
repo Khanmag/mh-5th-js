@@ -27,8 +27,11 @@ const userData = {
   },
   // метод (объекта) - функция внутри объекта
   //
-  // changeName(newName) {
-  //   userData.name = newName
+  changeName(newName) {
+    userData.name = newName
+  },
+  // "changeName": function() {
+
   // }
   //
   // changeName: function(newName) {
@@ -58,7 +61,8 @@ const userData = {
 // userData.jobs.doctor = "8 years"
 
 // console.log("userData", userData);
-// userData.changeName("Artyom");
+userData.name;
+userData.changeName("Artyom");
 // console.log("user1", user1);
 // console.log("user2", user2);
 
