@@ -1,8 +1,8 @@
-const game = {
-  nick: "CUBE",
+const answer = {
+  nick: "Ball",
   points: 0,
   startGame() {
-    const userValue = confirm("Бросаем кубик?");
+    const userValue = prompt("Задайте вопрос:");
     const yesOrNo = Math.random();
     if (yesOrNo < 0.166) {
       alert("Делайте один шаг вперед");
@@ -21,16 +21,4 @@ const game = {
     startGame();
   },
 };
-game.startGame();
-//if (yesOrNo>0) {
-// alert("Делайте один шаг вперед");
-
-//   if ((yesOrNo = Math.random() > 0.166)) {
-//     alert("Делайте два шага вперед");
-//   }
-// }
-// Math.random() > 0.166 ||
-//   Math.random() > 0.332 ||
-//   Math.random() > 0.498 ||
-//   Math.random() > 0.664 ||
-//   Math.random() > 0.83;
+answer.startGame();
