@@ -5,17 +5,17 @@ const answer = {
     const userValue = prompt("Задайте вопрос:");
     const yesOrNo = Math.random();
     if (yesOrNo < 0.166) {
-      alert("Делайте один шаг вперед");
+      alert("Конечно");
     } else if (yesOrNo < 0.332 && yesOrNo > 0.166) {
-      alert("Делайте два шага вперед");
+      alert("Не сомневайся");
     } else if (yesOrNo < 0.498 && yesOrNo > 0.332) {
-      alert("Делайте три шага вперед");
+      alert("Не стоит");
     } else if (yesOrNo < 0.664 && yesOrNo > 0.498) {
-      alert("Делайте четыре шага вперед");
+      alert("50/50");
     } else if (yesOrNo < 0.83 && yesOrNo > 0.664) {
-      alert("Делайте пять шагов вперед");
+      alert("Подумай");
     } else {
-      alert("Делайте шесть шагов вперед");
+      alert("Ммм");
     }
 
     startGame();
