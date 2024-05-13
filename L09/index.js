@@ -34,7 +34,37 @@ for (let index = 0; index < array.length; index++) {
 //   console.dir(error)
 // }
 
+const currentData = []
 // CRUD - create, read, update, delete / POST, GET, PUT | PATCH, DELETE
 fetch("https://jsonplaceholder.typicode.com/todos")
-  .then()
+  .then( response => {  
+    console.log("RESPONSE", response);
+    return response.json()
+    // return 329
+  })
+  .then( data => {
+    console.log("DATA", data);
+    renderTodo(data)
+    // currentData = data - не написано так, чтобы копировать не ссылку на массив, а его элементы
+    // currentData = [...data]
+    for(item of data) {
+      currentData.push(item)
+    }
+  })
   // then принимает в себя 2 функции, для удачного и неудачного сценария
+
+console.log(currentData);
+
+const renderTodo = (todoArr) => {
+  const div = document.getElementById("root")
+  const newList = document.createElement("ul")
+  for(item of todoArr) {
+    const newListItem = document.createElement("li")
+    newListItem.textContent = item.title
+    newList.append(newListItem) // добавляет один элемент в другой
+  }
+  div.append(newList)
+}
+
+
+
