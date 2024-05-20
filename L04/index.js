@@ -81,14 +81,14 @@ const game = {
       alert(`Вы ошиблись, ваши очки: ${--this.points}`);
     }
     // player.startGame() .. перезапускаем после каждой игры
-    let wantUserStart = confirm("сыграть")
+    let wantUserStart = confirm("сыграть");
     // if (wantUserStart) {
     //   player.startGame()
     // } else {
-      
+
     // }
     // this - объект в котором мы находимся
-    if (wantUserStart) this.startGame()
+    if (wantUserStart) this.startGame();
   },
 };
-game.startGame() // запускаем в первый раз
+game.startGame(); // запускаем в первый раз

@@ -32,17 +32,17 @@
 // } while(wantToContinue)
 
 // for (let i = 0; i < 100; i++) {
-  // if (i === 50 || i === 59 || i === 40) {
-  //   continue;
-  // }
-  // 10 % 3 => 1, 14 % 5 => 4
-  // if (i % 3 === 0 || i % 5 === 0) {
-  //   continue // на этом закончи и приступай к следующему
-  //   console.log(i)
-  // }
-  // if (i % 3 === 0 && i % 5 === 0) continue
-  // if (i % 3 === 0 && i % 5 === 0) console.log(i);
-  // console.log(i);
+// if (i === 50 || i === 59 || i === 40) {
+//   continue;
+// }
+// 10 % 3 => 1, 14 % 5 => 4
+// if (i % 3 === 0 || i % 5 === 0) {
+//   continue // на этом закончи и приступай к следующему
+//   console.log(i)
+// }
+// if (i % 3 === 0 && i % 5 === 0) continue
+// if (i % 3 === 0 && i % 5 === 0) console.log(i);
+// console.log(i);
 // }
 // for (let i = 0; ; i++) {
 //   // if (i < 1000) console.log(i);
@@ -88,9 +88,9 @@ function getName(name, age) {
 // getName(userName, userAge)
 
 // powNumber(15)
-const powNumber = function(n) {
+const powNumber = function (n) {
   console.log(n ** 2);
-}
+};
 
 // powNumber(4)
 // powNumber(41)
@@ -112,12 +112,9 @@ const powNumber = function(n) {
 const getMoreThenNumber = (n) => {
   // console.log(n + 1);
   // return
-  const userName = prompt("NAME!!!")
-  return userName
-}
+  const userName = prompt("NAME!!!");
+  return userName;
+};
 // getMoreThenNumber(4)
-const funcResult = getMoreThenNumber(4) // undefined
+const funcResult = getMoreThenNumber(4); // undefined
 console.log(funcResult);
-
-
-

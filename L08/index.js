@@ -8,7 +8,11 @@ const simpleFunc = () => {
 const countCreator = (num) => {
   let count = 0;
   return () => {
+<<<<<<< HEAD
+    console.log(`counter${num}`, count++);
+=======
     console.log(`counter${num} ${count++}`);
+>>>>>>> 5a46856c6cb447705692d63b57af0603ab5cc95c
     // return
   };
 };
@@ -26,6 +30,16 @@ const counter2 = countCreator(2);
 // 0 - от консоли в counter2
 // counter2 - 2  undefined - от консоли выше
 
+<<<<<<< HEAD
+counter2(); // 0
+// undefined
+counter2(); // 1
+counter2(); // 2
+counter2(); // 3
+
+const counter3 = countCreator(3);
+counter3();
+=======
 // counter2(); // 0
 // undefined
 // counter2(); // 1
@@ -34,19 +48,41 @@ const counter2 = countCreator(2);
 
 const counter3 = countCreator(3);
 // counter3();
+>>>>>>> 5a46856c6cb447705692d63b57af0603ab5cc95c
 //
 const callsCounter = (name) => {
   let count = 0;
   return () => console.log(`${name}'s calls - ${++count}`);
 };
 
+<<<<<<< HEAD
+=======
 const annasCalls = callsCounter("Anna");
 const billsCalls = callsCounter("Bill");
+>>>>>>> 5a46856c6cb447705692d63b57af0603ab5cc95c
 // annasCalls() // 1
 // billsCalls() // 1
 // billsCalls() // 2
 // billsCalls() // 3
 
+<<<<<<< HEAD
+//-----------Пропушенные звонки-----------
+const countCalls = (call) => {
+  let count = 0;
+  return (num = 1) => {
+    count = count + (isNaN(num) ? 1 : num);
+    console.log(`Пропущенный от ${call}`, count);
+  };
+};
+
+const Anna = countCalls("ANNA");
+Anna(3);
+Anna();
+const Bill = countCalls("BILL");
+Bill(2);
+Bill("hi");
+Bill();
+=======
 // console.log(window);
 // console.log(this);
 // console.log(global);
@@ -82,3 +118,4 @@ const timer = (secs) => {
 
 timer(20)
 
+>>>>>>> 5a46856c6cb447705692d63b57af0603ab5cc95c
